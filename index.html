@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление продуктами (Supabase)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем клиент Supabase через CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Структура и данные таблицы: products</h1>
+            <p id="connection-status">Подключение к Supabase...</p>
+        </header>
+
+        <main>
+            <section class="table-container">
+                <h2>Список товаров</h2>
+                <div class="table-responsive">
+                    <table id="products-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Название (name)</th>
+                                <th>Цена (price)</th>
+                                <th>Количество (quantity)</th>
+                                <th>Итого (total)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <!-- Данные будут загружены динамически через JS -->
+                            <tr>
+                                <td colspan="5" class="loading">Загрузка данных...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
