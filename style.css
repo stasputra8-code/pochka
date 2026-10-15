@@ -1,0 +1,102 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-color: #38bdf8;
+    --border-color: #334155;
+    --success-color: #4ade80;
+    --error-color: #f87171;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 2rem;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#connection-status {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+#connection-status.success {
+    color: var(--success-color);
+}
+
+#connection-status.error {
+    color: var(--error-color);
+}
+
+.table-container {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.table-container h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.loading {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 2rem;
+}
